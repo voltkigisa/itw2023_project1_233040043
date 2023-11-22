@@ -1,38 +1,50 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script&family=Poppins:wght@100&display=swap');
+
 /* navbar */
-.navbar {
-  width: 100%;
-  height: 50px;
+body nav {
   display: flex;
-  flex-flow: row wrap;
-  flex-direction: row-reverse;
+  justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(to right,  #ea00d9 20% , #711c91 80%);
+  background-image: linear-gradient(to right, #ea00d9 20%, #711c91 80%);
   box-shadow: 0 0 5px #ea00d9, 0 0 15px #711c91;
+  padding: 20px;
 }
 
-.navbar .link{
-    margin-right: 15px;
-    display: inline-table;
-    scale: 1;
+/* navbar link */
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px 5px;
 }
 
-.navbar > div .link{
-    text-decoration: none;
-    color: 	#0abdc6;
-    text-shadow: 0 0 5px;
-    font-weight: bold;
-    padding: 5px 5px;
+nav .link {
+  text-decoration: none;
+  color: #0abdc6;
+  text-shadow: 0 0 5px;
+  font-weight: bold;
+  padding: 5px 5px;
+  font-family: 'Audiowide', sans-serif;
 }
 
-.navbar > div .link:hover{
-    background-color: #0abdc6;
-    color: #091833 ;
-    border-radius: 5px;
-    box-shadow: 0 0 8px #0abdc6;
-    transform: scale(1.2);
-    transition: .3s;
+nav .link:hover {
+  background-color: #0abdc6;
+  color: #133e7c;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #0abdc6;
+  transform: scale(1.2);
+  transition: 0.5s;
 }
 
-.navbar > div .link:active{
-    transform: scale(.9);
+ul li:active {
+  transform: scale(0.9);
 }
+
+/* navbar logo */
+
+nav .logo {
+  font-family: 'Audiowide', sans-serif;
+  color: #133e7c;
+  text-shadow: 0 0 3px #133e7c;
+}
+
