@@ -1,5 +1,38 @@
-.navbar{
-    width: 80px;
-    height: 100%;
-    background-color: aqua;
+/* navbar */
+.navbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-image: linear-gradient(to right,  #ea00d9 20% , #711c91 80%);
+  box-shadow: 0 0 5px #ea00d9, 0 0 15px #711c91;
+}
+
+.navbar .link{
+    margin-right: 15px;
+    display: inline-table;
+    scale: 1;
+}
+
+.navbar > div .link{
+    text-decoration: none;
+    color: 	#0abdc6;
+    text-shadow: 0 0 5px;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+.navbar > div .link:hover{
+    background-color: #0abdc6;
+    color: #091833 ;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #0abdc6;
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+.navbar > div .link:active{
+    transform: scale(.9);
 }
