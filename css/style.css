@@ -7,7 +7,7 @@ body {
   overflow-x: hidden;
 }
 
-.container nav {
+.navbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -19,7 +19,7 @@ body {
 }
 
 /* navbar link */
-nav ul {
+.navbar ul {
   display: flex;
   justify-content: space-evenly;
   padding: 5px 5px;
@@ -27,7 +27,7 @@ nav ul {
   font-family: 'Audiowide', sans-serif;
 }
 
-nav .link {
+.navbar .link {
   text-decoration: none;
   color: #ea00d9;
   text-shadow: 0 0 5px;
@@ -35,7 +35,7 @@ nav .link {
   padding: 5px 5px;
 }
 
-nav .link:hover {
+.navbar .link:hover {
   background-color: #0abdc6;
   color: #1d5779;
   border-radius: 5px;
@@ -50,7 +50,7 @@ ul li:active {
 
 /* navbar logo */
 
-nav .logo {
+.navbar .logo {
   font-family: 'audiowide', sans-serif;
   color: #0abdc6;
   text-shadow: 0 0 7px #0abdc6;
@@ -116,9 +116,14 @@ nav .logo {
 
 /* Ukuran Tablet */
 @media screen and (max-width: 768px) {
-  nav ul {
+  .navbar ul {
     width: 60%;
   }
+
+  .header .pendidikan{
+    padding: 10px;
+  }
+
 }
 
 /* ukuran mobile */
@@ -127,7 +132,8 @@ nav .logo {
   .menu-toggle {
     display: flex;
   }
-  nav ul {
+
+  .navbar ul {
     position: absolute;
     right: 0;
     top: 0;
@@ -143,46 +149,59 @@ nav .logo {
     box-shadow: -4px 0 7px 5px #ea00d9;
   }
 
-  nav ul.slide {
+  .navbar ul.slide {
     opacity: 1;
     transform: translatex(0);
   }
 
-  .container header {
+  .header{
     flex-direction: column;
   }
+
+}
+
+/*container*/
+.container {
+  height: 100vh;
+  background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
+  position: relative;
+  z-index: -999;
+  display: flex;
+  font-family: 'audiowide', sans-serif;
+  font-size: 24px;
+  padding: 25px;
+  color: #0abdc6;
+  text-shadow: 0 0 5px #0abdc6;
 }
 
 /*header*/
-.container header {
-  top: 60px;
-  color: #0abdc6;
-  text-shadow: 0 0 5px #0abdc6;
-  overflow: hidden;
+.header{
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding: 50px 20px;
   align-items: center;
-  background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
-  position: relative;
-  z-index: -3;
 }
 
-header img {
-  width: 8rem;
+ .header img{
   border: 1px#ea00d9 solid;
-  box-shadow: 0 0 7px #ea00da;
-  border-radius: 10%;
+  box-shadow: 0 0 7px 5px #ea00da;
+  border-radius: 10px;
 }
 
-header h4 {
-  font-size: 28px;
-  padding: 15px 0px;
+.header span{
+  color: #ea00d9;
+  text-shadow: 0 0 5px #ea00d9;
 }
 
-header .teks {
-  font-family: 'audiowide', sans-serif;
-  justify-self: center;
-  padding: 25px;
+.header h4 {
+  padding: 10px 0;
+}
+
+.header .about {
+  font-size: 20px;
+}
+.header .pendidikan{
+  font-size: 20px;
 }
 
