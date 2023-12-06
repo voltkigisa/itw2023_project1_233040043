@@ -2,19 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Dancing+Script&family=Poppins:wght@100&display=swap');
 
 /* navbar */
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: 'audiowide', sans-serif;
   overflow-x: hidden;
 }
 
 .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
   padding: 20px;
-  position: fixed;
-  width: 100%;
   box-shadow: 0 0 7px 5px #0abdc6;
 }
 
@@ -78,6 +80,7 @@ ul li:active {
 }
 
 .menu-toggle span {
+  position: relative;
   display: block;
   width: 28px;
   height: 3px;
@@ -85,6 +88,7 @@ ul li:active {
   box-shadow: 0 0 5px #0abdc6;
   border-radius: 10px;
   transition: all 0.5s;
+  z-index: 1;
 }
 
 /* humbuger menu animasi */
@@ -111,7 +115,6 @@ ul li:active {
   opacity: 0;
 }
 
-
 /* Breakpoint */
 
 /* Ukuran Tablet */
@@ -120,10 +123,11 @@ ul li:active {
     width: 60%;
   }
 
-  .header .pendidikan{
+  .header .pendidikan {
     padding: 10px;
   }
 
+ 
 }
 
 /* ukuran mobile */
@@ -138,7 +142,7 @@ ul li:active {
     right: 0;
     top: 0;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -147,6 +151,7 @@ ul li:active {
     transition: all 0.6s;
     opacity: 0;
     box-shadow: -4px 0 7px 5px #ea00d9;
+    z-index: 1;
   }
 
   .navbar ul.slide {
@@ -154,19 +159,20 @@ ul li:active {
     transform: translatex(0);
   }
 
-  .header{
+  .header {
     flex-direction: column;
   }
-
+  
 }
 
 /*container*/
 .container {
-  height: 100vh;
+  height: 90vh;
   background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
   position: relative;
-  z-index: -999;
+  z-index: -99;
   display: flex;
+  align-content: center;
   font-family: 'audiowide', sans-serif;
   font-size: 24px;
   color: #0abdc6;
@@ -174,34 +180,86 @@ ul li:active {
 }
 
 /*header*/
-.header{
-  position: relative;
+.header {
   width: 100%;
+  position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 0 24px;
 }
 
- .header img{
+.header img {
   border: 1px#ea00d9 solid;
   box-shadow: 0 0 7px 5px #ea00da;
   border-radius: 10px;
 }
 
-.header span{
+.header span {
   color: #ea00d9;
   text-shadow: 0 0 5px #ea00d9;
 }
 
 .header h4 {
+  color: #ea00d9;
+  text-shadow: 0 0 5px #ea00d9;
   padding: 10px 0;
+}
+
+.header .nama {
+  color: #0abdc6;
+  text-shadow: 0 0 5px #0abdc6;
 }
 
 .header .about {
   font-size: 20px;
 }
-.header .pendidikan{
+.header .pendidikan {
   font-size: 20px;
 }
 
+/*skill*/
+
+.container-skill {
+  display: flex;
+  height: 130vh;
+  background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
+  position: relative;
+  z-index: -9;
+  justify-content: space-around;
+  font-family: 'audiowide', sans-serif;
+  font-size: 24px;
+  color: #0abdc6;
+  text-shadow: 0 0 5px #0abdc6;
+}
+
+.header-skill {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(0px, 150px));
+  gap: 2rem;
+  font-size: 14px;
+}
+
+.header-skill .skill {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 20px;
+  margin: 0 10px;
+  background-color: #1d5779;
+  border-radius: 20px;
+  box-shadow: 0 0 7px 5px #0abdc6;
+}
+
+.skill h4 {
+  color: #ea00d9;
+  text-shadow: 0 0 5px #ea00d9;
+  padding: 5px 0;
+}
+
+.header-skill img {
+  width: 100px;
+  height: 100px;
+}
