@@ -13,11 +13,10 @@ body {
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
   padding: 20px;
-  box-shadow: 0 0 7px 5px #0abdc6;
 }
 
 /* navbar link */
@@ -126,13 +125,10 @@ ul li:active {
   .header .pendidikan {
     padding: 10px;
   }
-
- 
 }
 
 /* ukuran mobile */
 @media screen and (max-width: 576px) {
-
   .menu-toggle {
     display: flex;
   }
@@ -162,12 +158,12 @@ ul li:active {
   .header {
     flex-direction: column;
   }
-  
 }
 
 /*container*/
 .container {
   height: 90vh;
+  overflow-y: hidden;
   background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
   position: relative;
   z-index: -99;
@@ -221,34 +217,33 @@ ul li:active {
 /*skill*/
 
 .container-skill {
+  height: 1fr;
   display: flex;
-  height: 130vh;
+  justify-content: center;
   background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
   position: relative;
   z-index: -9;
-  justify-content: space-around;
   font-family: 'audiowide', sans-serif;
-  font-size: 24px;
   color: #0abdc6;
   text-shadow: 0 0 5px #0abdc6;
 }
 
 .header-skill {
   display: grid;
-  align-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(0px, 150px));
+  width: 100vh;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0));
   gap: 2rem;
+  padding: 40px 20px;
   font-size: 14px;
 }
 
 .header-skill .skill {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  width: 250px;
+  max-height: 300px;
   padding: 20px 20px;
-  margin: 0 10px;
-  background-color: #1d5779;
+  background-color: #1f3341;
   border-radius: 20px;
   box-shadow: 0 0 7px 5px #0abdc6;
 }
@@ -262,4 +257,109 @@ ul li:active {
 .header-skill img {
   width: 100px;
   height: 100px;
+}
+
+
+/* portofolio */
+.container-portofolio {
+  width: 1fr;
+  height: 1fr;
+  background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
+  position: relative;
+  z-index: -9;
+  display: flex;
+  font-family: 'audiowide', sans-serif;
+  font-size: 20px;
+  color: #0abdc6;
+  text-shadow: 0 0 3px #0abdc6;
+  justify-content: center;
+}
+
+.header-portofolio{
+  display: grid;
+  justify-content: center;
+  width: 100vh;
+  gap: 2rem ;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 0));
+  padding: 40px 20px; 
+}
+
+.portofolio{
+  display: flex;
+  align-items: end;
+  background-image: url(../img/contohsaja.avif);
+  background-size: cover;
+  width: 200px;
+  height: 250px;
+  border: 1px solid ;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.portofolio .judul{
+  padding: 5px 5px;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  border-top-right-radius: 12px;
+}
+
+/* kontak*/
+.container-kontak{
+  width: 1fr;
+  height: 100vh;
+  background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
+  position: relative;
+  display: flex;
+  font-family: 'audiowide', sans-serif;
+  font-size: 20px;
+  color: #0abdc6;
+  text-shadow: 0 0 3px #0abdc6;
+}
+
+.header-kontak{
+  display: grid;
+  width: 100%;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+  padding: 40px 20px; 
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  box-shadow: 0 0 5px 3px #0abdc6;
+  border-radius: 5px;
+  background-color: #72c4f3;
+}
+
+textarea{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  box-shadow: 0 0 5px 3px #72c4f3;
+  border-radius: 5px;
+  background-color: #72c4f3;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
+  box-shadow: 0 0 5px 3px #0abdc6;
+  font-family: 'audiowide', sans-serif;
+  font-size: 16px;
+  color: #0abdc6;
+  text-shadow: 0 0 5px #0abdc6 ;
+  padding: 10px 0;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+input[type=submit]:hover{
+  transform: scale(1.1);
 }
