@@ -222,9 +222,8 @@ ul li:active {
   justify-content: center;
   background-image: linear-gradient(to right, #1d5779 20%, #711c91 80%);
   position: relative;
-  z-index: -9;
   font-family: 'audiowide', sans-serif;
-  color: #0abdc6;
+  color: rgb(10, 189, 198);
   text-shadow: 0 0 5px #0abdc6;
 }
 
@@ -249,16 +248,20 @@ ul li:active {
 }
 
 .skill h4 {
-  color: #ea00d9;
+  color: hsl(304, 100%, 46%);
   text-shadow: 0 0 5px #ea00d9;
   padding: 5px 0;
 }
 
 .header-skill img {
+  align-self: center;
   width: 100px;
   height: 100px;
 }
 
+.header-skill .deskripsi{
+  align-self: center;
+}
 
 /* portofolio */
 .container-portofolio {
@@ -279,7 +282,7 @@ ul li:active {
   display: grid;
   justify-content: center;
   width: 100vh;
-  gap: 2rem ;
+  gap: 3rem ;
   grid-template-columns: repeat(auto-fit, minmax(250px, 0));
   padding: 40px 20px; 
 }
@@ -287,20 +290,41 @@ ul li:active {
 .portofolio{
   display: flex;
   align-items: end;
-  background-image: url(../img/contohsaja.avif);
-  background-size: cover;
-  width: 200px;
-  height: 250px;
+  width: 280px;
+  height: 350px;
   border: 1px solid ;
   border-radius: 10px;
   overflow: hidden;
 }
 
+.portofolio.porto1{
+  background-image: url(../img/utp.webp);
+  background-position: center;
+}
+
+.portofolio.porto2{
+  background-image: url(../img/server.webp);
+  background-position: center;
+}
+
+.portofolio.porto3{
+  background-image: url(../img/portofolio.PNG);
+  background-position: center;
+  background-size: cover;
+}
+
+
+
 .portofolio .judul{
-  padding: 5px 5px;
+  width: 100%;
+  padding: 20px 5px;
   text-align: center;
   background-color: rgb(0, 0, 0);
   border-top-right-radius: 12px;
+}
+
+.portofolio:hover{
+  transform: scale(1.2);
 }
 
 /* kontak*/
@@ -362,4 +386,29 @@ input[type=submit] {
 
 input[type=submit]:hover{
   transform: scale(1.1);
+}
+
+/* footer */
+body footer{
+  background-color: black;
+  width: 100%;
+  align-self: flex-end;
+  font-family: 'audiowide', sans-serif;
+  color: #0abdc6;
+  text-shadow: 0 0 5px #0abdc6;
+}
+
+footer p {
+  padding: 15px 0;
+  text-align: center;
+}
+
+footer p span{
+  color: #ea00d9;
+  text-shadow: 0 0 5px #ea00d9;
+}
+
+footer p a{
+  text-decoration: none ;
+  color: #0abdc6;
 }
