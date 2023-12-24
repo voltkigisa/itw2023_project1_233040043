@@ -146,7 +146,7 @@ ul li:active {
     transform: translatey(-100%);
     transition: all 0.6s;
     opacity: 0;
-    box-shadow: -4px 0 7px 5px #ea00d9;
+    box-shadow: -4px 0 5px #ea00d9;
     z-index: 1;
   }
 
