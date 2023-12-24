@@ -338,15 +338,18 @@ ul li:active {
   font-size: 20px;
   color: #0abdc6;
   text-shadow: 0 0 3px #0abdc6;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .header-kontak{
   display: grid;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
   padding: 40px 20px; 
 }
+
 
 input[type=text], select {
   width: 100%;
@@ -390,7 +393,7 @@ input[type=submit]:hover{
 
 /* footer */
 body footer{
-  background-color: black;
+  background-color:black;
   width: 100%;
   align-self: flex-end;
   font-family: 'audiowide', sans-serif;
@@ -411,4 +414,22 @@ footer p span{
 footer p a{
   text-decoration: none ;
   color: #0abdc6;
+}
+
+.alternatif{  
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  }
+
+.alternatif a{
+  background-color: #0abdc6;
+  border-radius: 50%;
+  margin: 0 5px;
+  box-shadow: 0 0 5px #0abdc6;
+}
+
+.alternatif a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 7px 5px #0abdc6;
 }
